@@ -28,8 +28,6 @@ export class MusicEngine {
   private ctx: AudioContext | null = null;
   private masterGain: GainNode | null = null;
   private delay: DelayNode | null = null;
-  private delayFeedback: GainNode | null = null;
-  private delayWet: GainNode | null = null;
   private noiseBuffer: AudioBuffer | null = null;
   private bass: BassNodes | null = null;
 
@@ -66,8 +64,6 @@ export class MusicEngine {
     this.ctx = ctx;
     this.masterGain = masterGain;
     this.delay = delay;
-    this.delayFeedback = delayFeedback;
-    this.delayWet = delayWet;
     this.noiseBuffer = noiseBuffer;
 
     return ctx;
